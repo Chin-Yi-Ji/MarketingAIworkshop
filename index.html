@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>未來底加AI工作坊體驗課程 - 用 Cursor AI 打造你的個人品牌網站</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366F1',
+                        secondary: '#EC4899',
+                        accent: '#F59E0B',
+                        neon: '#10B981',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;900&display=swap');
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hover-scale {
+            transition: all 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .card-glow {
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+        }
+        .card-glow:hover {
+            box-shadow: 0 20px 50px rgba(99, 102, 241, 0.3);
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .bounce-in {
+            animation: bounceIn 0.8s ease-out;
+        }
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.05); }
+            70% { transform: scale(0.9); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-blue-50">
+    <!-- Hero 區塊 -->
+    <section class="gradient-bg text-white py-24 px-4 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+        <div class="relative z-10 max-w-6xl mx-auto text-center">
+            <div class="floating mb-8">
+                <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+                    🚀 未來底加
+                </h1>
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">
+                    AI工作坊
+                </h2>
+            </div>
+            <h3 class="text-2xl md:text-3xl font-semibold mb-8 text-yellow-200">
+                用 Cursor 無代碼打造個人品牌網站
+            </h3>
+            <p class="text-xl md:text-2xl mb-12 text-blue-100 font-medium">
+                零程式基礎，用 AI 做出個人品牌網站並上線！
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-8 mt-16 mb-12">
+                <div class="bg-white bg-opacity-15 backdrop-blur-sm rounded-3xl p-8 border border-white border-opacity-20">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-200">🎯 為什麼要建立個人品牌網站？</h3>
+                    <ul class="text-left space-y-3 text-lg">
+                        <li class="flex items-center space-x-3">
+                            <span class="text-2xl">✨</span>
+                            <span>提升專業形象與信任感</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-2xl">🚀</span>
+                            <span>創造職涯與事業機會</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-2xl">💎</span>
+                            <span>建立自我價值的長期資產</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white bg-opacity-15 backdrop-blur-sm rounded-3xl p-8 border border-white border-opacity-20">
+                    <h3 class="text-xl font-bold mb-4 text-yellow-200">💎 個人品牌網站的優勢</h3>
+                    <ul class="text-left space-y-3 text-lg">
+                        <li class="flex items-center space-x-3">
+                            <span class="text-2xl">🎨</span>
+                            <span><strong>自由打造</strong>：完全依照自己想法設計</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-2xl">⭐</span>
+                            <span><strong>專屬形象</strong>：突顯個人風格與專業</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="text-2xl">🔥</span>
+                            <span><strong>脫穎而出</strong>：差異化，超越制式平台</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <button onclick="openForm()" class="bg-gradient-to-r from-accent to-orange-500 hover:from-orange-500 hover:to-red-500 text-white font-black py-6 px-12 rounded-full text-2xl hover-scale shadow-2xl transform transition-all duration-300">
+                🎉 立即報名
+            </button>
+        </div>
+    </section>
+
+    <!-- 課程亮點區 -->
+    <section class="py-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-black text-center mb-20 gradient-text">
+                ✨ 你會獲得什麼？
+            </h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="text-center p-10 rounded-3xl bg-gradient-to-br from-blue-50 to-indigo-100 hover-scale card-glow border-2 border-blue-200">
+                    <div class="text-8xl mb-8 floating">🎯</div>
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">實作成果</h3>
+                    <p class="text-lg text-gray-600 leading-relaxed">完成一個展現個人專業價值的品牌網站</p>
+                </div>
+                <div class="text-center p-10 rounded-3xl bg-gradient-to-br from-purple-50 to-pink-100 hover-scale card-glow border-2 border-purple-200">
+                    <div class="text-8xl mb-8 floating">🤖</div>
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">AI技能啟動</h3>
+                    <p class="text-lg text-gray-600 leading-relaxed">學會用 Cursor 把想法實現，建立長期競爭優勢</p>
+                </div>
+                <div class="text-center p-10 rounded-3xl bg-gradient-to-br from-orange-50 to-yellow-100 hover-scale card-glow border-2 border-orange-200">
+                    <div class="text-8xl mb-8 floating">👥</div>
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">跨界經驗分享</h3>
+                    <p class="text-lg text-gray-600 leading-relaxed">由 AI 工程師 / PM 與軟體工程師帶領，學習成功案例</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 適合誰參加 -->
+    <section class="py-24 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-black text-center mb-20 gradient-text">
+                🎯 誰適合參加？
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover-scale border-2 border-transparent hover:border-primary">
+                    <div class="text-4xl mb-4">💼</div>
+                    <p class="text-lg text-gray-700 font-medium">想打造個人品牌、行銷自己的<strong class="text-primary">求職者、自由工作者、學生</strong></p>
+                </div>
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover-scale border-2 border-transparent hover:border-secondary">
+                    <div class="text-4xl mb-4">💡</div>
+                    <p class="text-lg text-gray-700 font-medium">想用<strong class="text-secondary">低門檻方式</strong>實現點子的創作者</p>
+                </div>
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover-scale border-2 border-transparent hover:border-accent">
+                    <div class="text-4xl mb-4">🚀</div>
+                    <p class="text-lg text-gray-700 font-medium">想要<strong class="text-accent">提升專業形象</strong>、增加職涯機會的職場人士</p>
+                </div>
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover-scale border-2 border-transparent hover:border-neon">
+                    <div class="text-4xl mb-4">💎</div>
+                    <p class="text-lg text-gray-700 font-medium">希望建立<strong class="text-neon">個人品牌資產</strong>、展現獨特價值的專業人士</p>
+                </div>
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover-scale border-2 border-transparent hover:border-primary">
+                    <div class="text-4xl mb-4">🎓</div>
+                    <p class="text-lg text-gray-700 font-medium">剛畢業想<strong class="text-primary">脫穎而出</strong>的社會新鮮人</p>
+                </div>
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover-scale border-2 border-transparent hover:border-secondary">
+                    <div class="text-4xl mb-4">🌟</div>
+                    <p class="text-lg text-gray-700 font-medium">想要<strong class="text-secondary">與眾不同</strong>的個人品牌經營者</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <div class="bg-gradient-to-r from-primary to-secondary text-white p-8 rounded-3xl shadow-2xl inline-block">
+                    <p class="text-2xl font-bold leading-relaxed">
+                        你不再只是有想法的人，<br>
+                        而是真正能動手實現的工程師與創造者。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 講師介紹 -->
+    <section class="py-24 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-black text-center mb-20 gradient-text">
+                👩‍🏫 課程講師
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="text-center p-12 rounded-3xl bg-gradient-to-br from-blue-50 to-indigo-100 card-glow border-2 border-blue-200">
+                    <div class="w-32 h-32 bg-gradient-to-br from-primary to-blue-600 rounded-full mx-auto mb-8 flex items-center justify-center text-white text-4xl font-black shadow-lg">
+                        AI
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4 text-gray-800">紀欽益</h3>
+                    <p class="text-lg text-gray-600 mb-4">曾任 AI 工程師，現任 AI 產品經理</p>
+                    <div class="inline-block bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        AI 專家
+                    </div>
+                </div>
+                <div class="text-center p-12 rounded-3xl bg-gradient-to-br from-purple-50 to-pink-100 card-glow border-2 border-purple-200">
+                    <div class="w-32 h-32 bg-gradient-to-br from-secondary to-pink-600 rounded-full mx-auto mb-8 flex items-center justify-center text-white text-4xl font-black shadow-lg">
+                        SE
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4 text-gray-800">陳展佑</h3>
+                    <p class="text-lg text-gray-600 mb-4">曾任軟體工程師、Youtube頻道"未來來了沒"主理人</p>
+                    <div class="inline-block bg-secondary text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        內容創作者
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 課程資訊 -->
+    <section class="py-24 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-black text-center mb-20 gradient-text">
+                📍 活動資訊
+            </h2>
+            <div class="bg-white rounded-3xl p-12 shadow-2xl border-2 border-gray-100">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-8">
+                        <div class="flex items-center space-x-6">
+                            <div class="text-5xl">📅</div>
+                            <div>
+                                <h3 class="font-bold text-2xl text-gray-800 mb-2">時間</h3>
+                                <p class="text-xl text-gray-600">8/30 (六) 14:00–17:00</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-6">
+                            <div class="text-5xl">📍</div>
+                            <div>
+                                <h3 class="font-bold text-2xl text-gray-800 mb-2">地點</h3>
+                                <p class="text-xl text-gray-600">靈感咖啡（台大旁邊）</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-gradient-to-r from-accent via-orange-500 to-red-500 text-white p-12 rounded-3xl shadow-2xl">
+                            <h3 class="text-3xl font-bold mb-4">課程收費</h3>
+                            <div class="text-6xl font-black mb-4">NT$400</div>
+                            <p class="text-xl mb-2">含包場費用</p>
+                            <p class="text-orange-200 line-through text-lg">原價 1200 元</p>
+                            <div class="mt-6 bg-white bg-opacity-20 rounded-full px-6 py-2 text-sm font-semibold">
+                                🎉 限時優惠
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA 區塊 -->
+    <section class="py-24 px-4 gradient-bg text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div class="relative z-10 max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl md:text-6xl font-black mb-8">
+                👉 名額有限，立即報名！
+            </h2>
+            <p class="text-2xl mb-12 text-yellow-200 font-medium">
+                投資自己，建立專屬的個人品牌網站，<br>
+                讓你的專業價值被更多人看見！
+            </p>
+            <button onclick="openForm()" class="bg-gradient-to-r from-accent to-orange-500 hover:from-orange-500 hover:to-red-500 text-white font-black py-8 px-16 rounded-full text-3xl hover-scale shadow-2xl transform transition-all duration-300">
+                🚀 點我報名
+            </button>
+        </div>
+    </section>
+
+    <!-- 最終激勵語 -->
+    <section class="py-20 px-4 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="bg-gradient-to-r from-accent to-orange-500 p-12 rounded-3xl shadow-2xl">
+                <h2 class="text-4xl md:text-5xl font-black mb-6 leading-tight">
+                    過去，想法不值錢；
+                </h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-yellow-200">
+                    從今以後，你的想法很值錢。
+                </h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4 text-center">
+        <p class="text-gray-400 text-lg">© 2025 未來底加AI工作坊. All rights reserved.</p>
+    </footer>
+
+    <!-- 報名表單彈出視窗 -->
+    <div id="formModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
+            <div class="flex justify-between items-center p-6 border-b border-gray-200">
+                <h3 class="text-2xl font-bold text-gray-800">AI工作坊報名表單</h3>
+                <button onclick="closeForm()" class="text-gray-500 hover:text-gray-700 text-3xl font-bold">
+                    ×
+                </button>
+            </div>
+            <div class="p-6">
+                <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLScfX-LtwGfKCbuXUdZ69Rjo6x6O_90mazHNEYzCUjVlmWWmfg/viewform?embedded=true" 
+                    width="100%" 
+                    height="600" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0">
+                    載入中…
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 報名表單功能
+        function openForm() {
+            document.getElementById('formModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // 防止背景滾動
+        }
+
+        function closeForm() {
+            document.getElementById('formModal').classList.add('hidden');
+            document.body.style.overflow = 'auto'; // 恢復背景滾動
+        }
+
+        // 點擊背景關閉彈出視窗
+        document.getElementById('formModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeForm();
+            }
+        });
+
+        // ESC 鍵關閉彈出視窗
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeForm();
+            }
+        });
+
+        // 添加滾動動畫
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('bounce-in');
+                }
+            });
+        }, observerOptions);
+
+        // 觀察所有卡片元素
+        document.querySelectorAll('.card-glow, .hover-scale').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html> 
